@@ -4,7 +4,11 @@
   [Wabbajack Logs 101](#wabbajack-logs-101)
 
 ### **General Issues**
-  [Wabbajack - General Issues](#general-wabbajack-issues)
+  * [Wabbajack - General Issues](#general-wabbajack-issues)
+  
+    * [Wabbajack will not open correctly](#wabbajack-will-not-open-correctly)
+     
+      * [Wabbajack is stuck on a loading splash](wabbajack-is-stuck-on-a-loading-splash)
   
   [Living Skyrim - General Issues](#general-living-skyrim-issues)
   
