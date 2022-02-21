@@ -4,11 +4,23 @@
   [Wabbajack Logs 101](#wabbajack-logs-101)
 
 ### **General Issues**
+  
   * [Wabbajack - General Issues](#general-wabbajack-issues)
   
-    * [Wabbajack will not open correctly](#wabbajack-will-not-open-correctly)
-     
-      * [Wabbajack is stuck on a loading splash](wabbajack-is-stuck-on-a-loading-splash)
+  * [Wabbajack will not open correctly](#wabbajack-will-not-open-correctly)
+    * [Wabbajack is stuck on a loading splash](#wabbajack-is-stuck-on-a-loading-splash)
+  
+  * [Wabbajack will not start the modlist installation](#wabbajack-will-not-start-the-modlist-installation)
+    * [Wabbajack is stuck on the select install and download location screen](#wabbajack-is-stuck-on-the-select-install-and-download-location-screen)
+  
+  * [Install Failed Errors]()
+    * [Install Failed with screenshot showing the Wabbajack UI log with 'Unable to download...' error visible.](#install-failed-with-screenshot-showing-the-wabbajack-ui-log-with-unable-to-download-error-visible)
+    * [Install Failed - Out of Memory error](#install-failed---out-of-memory-error)
+    * [Installation Failed - 7zip Return Error](#installation-failed---7zip-return-error)
+    * [Installation Failed - 7zip Return Error -- Not Enough Space](#installation-failed---7zip-return-error----not-enough-space)
+  
+  
+  
   
   [Living Skyrim - General Issues](#general-living-skyrim-issues)
   
