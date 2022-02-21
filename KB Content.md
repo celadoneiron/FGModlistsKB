@@ -248,13 +248,54 @@ This section will detail common issues with Wabbajack installs. Where possible I
   
   For Nexus file errors the log line will end in `(NexusDownloader+State|SkyrimSpecialEdition|19924|66001)` here the first part after the `NexusDownloader+State` will be the game category, the next is the Mod ID, and the last is the File ID. Finding the mod name is usually easy, but you can attach the Mod ID to the end of `https://www.nexusmods.com/skyrimspecialedition/mods/` to find the mod page. To find the File ID, go to the Files tab of the mod page and hover over the download button. in the bottom left corner of most browsers you will see a notification message that will say something like `https://www.nexusmods.com/Core/Libs/Common/Widgets/DownloadPopUp?id=66001&nmm=1&game_id=1704` the important information here is the number after `DownloadPopUp?id=` The number after this must match the File ID from the Wabbajack log. this is how you find the correct download the list requires without knowing it beforehand. If there are a lot of these Nexus errors in the log this can indicate network errors or in the case of users with Nexus Premium, the need to change the download location preferences in the Site Preferences > Premium Membership Preferences settings to something other than CDN or a different region location.
   
-  The last source type that doesn't have a direct link are Base Game files. These are noted with log lines ending in `(GameFileSourceDownloader+State|SkyrimSpecialEdition|1.5.97.0|skyrimse.exe)` This shows the game required, and the version number listed here is the *expected* version, not what the user currently has. the last part is the file required. Generally a fix for these files is to verify the game install through Steam.
+  The last source type that doesn't have a direct link are Base Game files. These are noted with log lines ending in `(GameFileSourceDownloader+State|SkyrimSpecialEdition|1.5.97.0|skyrimse.exe)` This shows the game required, and the version number listed here is the *expected* version, not what the user currently has. the last part is the file required. Generally a fix for these files is to verify the game install through Steam. As a special note for this type of error if the only file failing is the `Skyrim_Default.ini` ensure the user has their game language set to English in Steam.
   
+ 
+  ![image](https://user-images.githubusercontent.com/38520983/154915579-d4a6862a-d461-4fdb-b2db-0eb1c1ee02fe.png)
   
+  #### Install Failed - Out of Memory error
   
+  ###### Cause
+    Lack of System Memory or too low pagefile size
     
+  ###### Solution
+    Pagefile command or check WJ log for amount of system ram
+    
+  ###### Detailed Solution
+  
+  This is a decidedly rare error when WJ is installing a mod list but it can happen. Generally setting a larger pagefile will fix this but on occassion a user may attempt to install the list with a very small amount of system RAM.
+  
+  
+ ![image](https://user-images.githubusercontent.com/38520983/154916494-d29adbef-0ea2-4086-9606-ea2d459bdf56.png)
+ 
+  
+  #### Installation Failed - 7zip Return Error
+  
+  ###### Cause
+    File being extracted is corrupt
+ 
+  ###### Solution
+    Check Wabbajack log for specific file that is erroring. Have user delete and redownload the file.
+  
+  ###### Detailed Solution
+  Generally this error indicates a corrupt file of some kind. Look back in the log from where this error occurred and try to find the most recent file it was extracting. It most commonly occurs when extracting the Wabbajack file at the end of an install but not always. Have the user close Wabbajack, delete the file in Windows Explorer and then try the install again. **Do not confuse this error with a similar 7zip Error that mentions the user has run out of hard drive space.**
 
 
+  ![image](https://user-images.githubusercontent.com/38520983/154918041-5ae0524c-c757-44f3-aea2-b72dc08aec9a.png)
+
+  #### Installation Failed - 7zip Return Error -- Not Enough Space
+  
+  ###### Cause
+    Not enough space on the Installation drive.
+  
+  ###### Solution
+    Have user free up disk space
+  
+  ###### Detailed Solution
+  
+  This error will generally occur at the end of an install when mods or the Wabbajack file are extracting. Checking the Drive Watcher section of the log is a good first step. You can generally determine which drive is low on space from there. If all the drives mentioned in the Drive Watcher have ample space, assume the C drive is the culprit even if it's not listed in the Drive Watcher, and have the user free some space there if possible.
+  
+  
 
 ### General Living Skyrim Issues
 
