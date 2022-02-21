@@ -29,6 +29,8 @@ This will be an overview of the contents of a typical Wabbajack log file with ea
 
 Fully detailed solutions and things to look for in logs will be included in the General Issues section for quick reference.
 
+---
+
 ![image](https://user-images.githubusercontent.com/38520983/154885616-de500839-1a38-4c07-8326-264054c214e9.png)
 
 Here is the beginning of a log file. The first line shows you the Wabbajack build version, this is usually not needed for support issues.
@@ -40,6 +42,8 @@ The Third line shows the current Operating System version. Usually not an issue 
 The next two lines show general system information such as the amount of RAM available as well as the display settings and video memory size, as well as a warning if the pagefile for the system is below 20000MB. While generally not useful for diagnosing Wabbajack issues it can be helpful to check and advise the user if their system specs seem especially low for the requirements of the list. Pagefile can be an issue if Wabbajack is reporting out of memory errors.
 
 You may also see an entry around this point of the log saying: `Outside of standard install folder, not updating` This generally means the user is running wabbajack from inside the Version folder for wabbajack and not using the main launcher. While typically not a problem it can cause issues if the list requires a newer version of Wabbajack than the version they are currently running. Otherwise this line can generally be ignored.
+
+---
 
 ![image](https://user-images.githubusercontent.com/38520983/154886587-399f8473-33d0-4c11-bb87-d9e780195baa.png)
 
@@ -65,11 +69,13 @@ You may occassionaly see double entries for games in the list of games. While th
 
 And lastly if the game required *is* in the list but Wabbajack is still reporting it cannot find the game, that usually means the user either has multiple copies of the game installed or has moved the files manually and Steam is still assuming the game is in the previous location. It's good practice to double check where the user ~thinks~ the game is installed and compare it to where the log says it's looking for the game. This is usually caused by users cut/pasting the game files out of the installed folder to somewhere else, usually to move the install outside of Program Files.
 
+---
 
 ![image](https://user-images.githubusercontent.com/38520983/154888204-02e1d077-5700-4674-9007-41d3567e8629.png)
 
 The next section in a log will be the other Game Finder locations, such as Origin, Epic Game Store, GOG etc. This is currently only relevant for MOISE support, further information will be in MOISE general issues.
 
+---
 
 ![image](https://user-images.githubusercontent.com/38520983/154889570-d4ac5e65-8b81-489e-8aa5-6aec636ec554.png)
 
@@ -81,11 +87,13 @@ The File hash check here is for the downloaded Wabbajack file, this is usually n
 
 The Loading Modlists from Github is Wabbajack's Github Verification. an error line here would indicate either an outage with Github or an issue on the user's network.
 
+---
 
 ![image](https://user-images.githubusercontent.com/38520983/154890578-fd57a16b-1145-4ea6-b11b-4c08160e4921.png)
 
 Entries in the log that look something like this mean Wabbajack is having issues displaying thumbnail images for modlists in the gallery. This can generally be ignored but if these lines are present and the user is experiencing other network related problems like not being able to download the modlist file or issues with mod downloads it may point to a deeper issue.
 
+---
 
 ![image](https://user-images.githubusercontent.com/38520983/154890328-d5b631ea-9c79-4e63-9d3d-e321ad6c5220.png)
 
@@ -93,7 +101,7 @@ Next are some lines indicating an install has been started. If these lines aren'
 
 Any errors here would likely mean something is interfering with Wabbajacks Installer/VFS systems which may indicate Antivirus issues or folder permission issues (running in protected folders etc.)
 
-
+---
 
 ![image](https://user-images.githubusercontent.com/38520983/154891524-3fa7de6e-7964-4172-8f51-b97c63a64a1f.png)
 
@@ -112,7 +120,7 @@ Some things to note about the Drive watcher:
 
 Generally users will run wabbajack from their C drive, which can sometimes be low on space especially as it's not usually associated with where Wabbajack ~needs~ space to be free, solutions would be running Wabbajack from another drive, but if their C drive is still very low on space they may need to clear some space even with Wabbajack running on a different drive.
 
-
+---
 
 ![image](https://user-images.githubusercontent.com/38520983/154893313-aa8ae745-07f7-4ee3-b3b8-48d9d051bfe2.png)
 
@@ -122,7 +130,7 @@ Usually not a cause for support, but making sure the install folder and the list
 
 Following this will be a list of files being deleted, this can usually be ignored but any errors here usually indicate folder permission issues or possibly antivirus interference.
 
-
+---
 
 ![image](https://user-images.githubusercontent.com/38520983/154894404-fe0035a3-f9f5-40a6-b612-59202eae39c9.png)
 
@@ -131,7 +139,7 @@ Otherwise you will see some general status lines from Wabbajack about what it's 
 
 Nexus API errors will be covered in detail in the general issues section, but if the log abruptly ends here the general advice is to have the user try the install again, Wabbajack has a tendency to hang at this point if there are issues logging in to the API at any point.
 
-
+---
 
 ![image](https://user-images.githubusercontent.com/38520983/154894690-2dadb491-589c-48ea-8a01-ae66f9c66aad.png)
 
@@ -140,7 +148,7 @@ Following this will be a list of all the mods that are being downloaded, any iss
 
 For info on specific Download issues see the Wabbajack General Issues section.
 
-
+---
 
 ![image](https://user-images.githubusercontent.com/38520983/154895098-9949c9e7-1bd7-4edb-afe5-c687b8ea3a49.png)
 
@@ -152,7 +160,7 @@ Most lines here can be ignored if they look similar to this image.
 
 Errors here would usually mean something corrupt in the Wabbajack file, meaning it should be deleted from the `downloaded_mod_lists` folder located where Wabbajack is being run from and redownloaded from the Browse Modlist section in Wabbajack.
 
-
+---
 
 ![image](https://user-images.githubusercontent.com/38520983/154895714-f28cc77d-0d46-4f03-b49f-9ef3832ceed6.png)
 
@@ -160,6 +168,7 @@ Next will be a list of all the mod files being extracted for the install. Errors
 
 Specific errors will be noted in the General Wabbajack Issues or the List specific section.
 
+---
 
 ![image](https://user-images.githubusercontent.com/38520983/154895972-1a6563b5-e44d-4527-a1e2-0e2bfaa4b113.png)
 
@@ -173,12 +182,11 @@ The `Skipping screen size remap` error line can usually be safely ignored. I can
 
 On ocassion an HTTP error can show here, which the install will *Fail* on, generally this means Wabbajack failed to show the readme page included with the Wabbajack file. While wabbajack technically calls this a failed install it *usually* means the install actually completed correctly.
 
+---
 
 And there you have it. a (reasonably) comprehensive breakdown of the typicall Wabbajack log file for a sucessful install. Further details on each section and specific erorr messsages and fixes will be in the general and temporary Wabbajack Issues section of this document.
 
 Thank you for reading this far!
-
-
 
 
 
@@ -191,8 +199,11 @@ Thank you for reading this far!
 
 This section will detail common issues with Wabbajack installs. Where possible I will include screenshots of the errors, while this list is being curated I will substitute paraphrased error messages to the best of my recollection if I do not have a screenshot of the error. Please DM me any errors that I've missed or if you have screenshots of any yourself, or feel free to use a pull request, this is intented to be a community project.
 
+---
 
-  ### Wabbajack will not open correctly.
+  ## Wabbajack will not open correctly.
+  
+  
   
   ![image](https://user-images.githubusercontent.com/38520983/154899155-f61e3312-6027-4549-bbe1-f7abd42d928a.png)
   
@@ -203,7 +214,9 @@ This section will detail common issues with Wabbajack installs. Where possible I
   ###### Solution
     wjreset command
 
-  ### Wabbajack will not start the modlist installation
+---
+
+  ## Wabbajack will not start the modlist installation
   
   ![image](https://user-images.githubusercontent.com/38520983/154907701-94b2a129-2c20-4118-b306-1c86af9d73a7.png)
   
@@ -224,8 +237,9 @@ This section will detail common issues with Wabbajack installs. Where possible I
   
   For error messages that say `Either delete everything except the downloads folder, or pick a new location. Cannot install to this folder as it has unexpected files` This is typically caused by the user installing to a blacklisted location, such as Desktop, Documents, Downloads etc. or they are installing to a folder that has files in it other than the default 'downloads' folder. The simpilest solution for this error is to have them create a new folder in the root of their drive named after the modlist and install there. If the user is partially through a modlist install already be sure to double check where they have set as their download location to make sure they don't download mods a second time.
   
+  ---
   
-  ### Install Failed Errors
+  ## Install Failed Errors
   
   ![image](https://user-images.githubusercontent.com/38520983/154900542-8c122467-9f36-4b66-88df-99a58b9827da.png)
   
@@ -250,6 +264,7 @@ This section will detail common issues with Wabbajack installs. Where possible I
   
   The last source type that doesn't have a direct link are Base Game files. These are noted with log lines ending in `(GameFileSourceDownloader+State|SkyrimSpecialEdition|1.5.97.0|skyrimse.exe)` This shows the game required, and the version number listed here is the *expected* version, not what the user currently has. the last part is the file required. Generally a fix for these files is to verify the game install through Steam. As a special note for this type of error if the only file failing is the `Skyrim_Default.ini` ensure the user has their game language set to English in Steam.
   
+ ---
  
   ![image](https://user-images.githubusercontent.com/38520983/154915579-d4a6862a-d461-4fdb-b2db-0eb1c1ee02fe.png)
   
@@ -265,7 +280,8 @@ This section will detail common issues with Wabbajack installs. Where possible I
   
   This is a decidedly rare error when WJ is installing a mod list but it can happen. Generally setting a larger pagefile will fix this but on occassion a user may attempt to install the list with a very small amount of system RAM.
   
-  
+ --- 
+ 
  ![image](https://user-images.githubusercontent.com/38520983/154916494-d29adbef-0ea2-4086-9606-ea2d459bdf56.png)
  
   
@@ -280,6 +296,7 @@ This section will detail common issues with Wabbajack installs. Where possible I
   ###### Detailed Solution
   Generally this error indicates a corrupt file of some kind. Look back in the log from where this error occurred and try to find the most recent file it was extracting. It most commonly occurs when extracting the Wabbajack file at the end of an install but not always. Have the user close Wabbajack, delete the file in Windows Explorer and then try the install again. **Do not confuse this error with a similar 7zip Error that mentions the user has run out of hard drive space.**
 
+---
 
   ![image](https://user-images.githubusercontent.com/38520983/154918041-5ae0524c-c757-44f3-aea2-b72dc08aec9a.png)
 
@@ -295,7 +312,9 @@ This section will detail common issues with Wabbajack installs. Where possible I
   
   This error will generally occur at the end of an install when mods or the Wabbajack file are extracting. Checking the Drive Watcher section of the log is a good first step. You can generally determine which drive is low on space from there. If all the drives mentioned in the Drive Watcher have ample space, assume the C drive is the culprit even if it's not listed in the Drive Watcher, and have the user free some space there if possible.
   
-  
+---
+
+
 
 ### General Living Skyrim Issues
 
