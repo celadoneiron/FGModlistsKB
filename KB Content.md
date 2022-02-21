@@ -203,6 +203,28 @@ This section will detail common issues with Wabbajack installs. Where possible I
   ###### Solution
     wjreset command
 
+  ### Wabbajack will not start the modlist installation
+  
+  ![image](https://user-images.githubusercontent.com/38520983/154907701-94b2a129-2c20-4118-b306-1c86af9d73a7.png)
+  
+  #### Wabbajack is stuck on the select install and download location screen
+  
+  ###### Cause
+    Incorrect Wabbajack version
+    Incorrect install location
+  ###### Solution
+    Have the user hover over the exclamation mark to determine error. Follow fixes for the various causes in detailed solution. 
+    If no error shown on hover assume old wabbajack version have the user update. otherwise wjreset command.
+    
+  ###### Detailed Solution
+  
+  Errors on this screen are typically self explanatory. Having the user hover over the exclamation mark will usually result in figuring out the issue. 
+
+  For error messages that say `The Modlist you are trying to install was made using a newer Version of Wabbajack` Instruct the user to either update Wabbajack by running the main launcher, as this typically occurs when the user is running Wabbajack from inside the version folder. Or have them download Wabbajack fresh from the website and replace their existing install.
+  
+  For error messages that say `Either delete everything except the downloads folder, or pick a new location. Cannot install to this folder as it has unexpected files` This is typically caused by the user installing to a blacklisted location, such as Desktop, Documents, Downloads etc. or they are installing to a folder that has files in it other than the default 'downloads' folder. The simpilest solution for this error is to have them create a new folder in the root of their drive named after the modlist and install there. If the user is partially through a modlist install already be sure to double check where they have set as their download location to make sure they don't download mods a second time.
+  
+  
   ### Install Failed Errors
   
   ![image](https://user-images.githubusercontent.com/38520983/154900542-8c122467-9f36-4b66-88df-99a58b9827da.png)
