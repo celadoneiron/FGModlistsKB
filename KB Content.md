@@ -1,18 +1,18 @@
 # **Contents**
 
 ### **Reading Wabbajack Logs**
-[Wabbajack Logs 101](https://github.com/Dace617/FGModlistsKB/edit/main/KB%20Content.md#wabbajack-logs-101)
+[Wabbajack Logs 101](https://github.com/Dace617/FGModlistsKB/blob/main/KB%20Content.md#wabbajack-logs-101)
 
 ### **General Issues**
-[Wabbajack - General Issues](https://github.com/Dace617/FGModlistsKB/edit/main/KB%20Content.md#general-wabbajack-issues)
-[Living Skyrim - General Issues]
-[Path of the Dovahkiin - General Issues]
-[MOISE - General Issues]
+[Wabbajack - General Issues](https://github.com/Dace617/FGModlistsKB/blob/main/KB%20Content.md#general-wabbajack-issues)
+[Living Skyrim - General Issues](https://github.com/Dace617/FGModlistsKB/blob/main/KB%20Content.md#general-living-skyrim-issues)
+[Path of the Dovahkiin - General Issues](https://github.com/Dace617/FGModlistsKB/blob/main/KB%20Content.md#general-path-of-the-dovahkiin-issues)
+[MOISE - General Issues](https://github.com/Dace617/FGModlistsKB/blob/main/KB%20Content.md#general-moise-issues)
 
 ### **Tempoarary Issues**
-[Wabbajack - Temporary Issues]
-[Living Skyrim - Temporary Issues]
-[Path of the Dovahkiin - Temporary Issues]
+[Wabbajack - Temporary Issues](https://github.com/Dace617/FGModlistsKB/blob/main/KB%20Content.md#temporary-wabbajack-issues)
+[Living Skyrim - Temporary Issues](https://github.com/Dace617/FGModlistsKB/blob/main/KB%20Content.md#temporary-living-skyrim-issues)
+[Path of the Dovahkiin - Temporary Issues](https://github.com/Dace617/FGModlistsKB/blob/main/KB%20Content.md#temporary-path-of-the-dovahkiin-issues)
 
 
 
