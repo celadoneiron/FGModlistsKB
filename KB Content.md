@@ -1,24 +1,30 @@
 # **Contents**
 
 ### **Reading Wabbajack Logs**
-[Wabbajack Logs 101](https://github.com/Dace617/FGModlistsKB/blob/main/KB%20Content.md#wabbajack-logs-101)
+  [Wabbajack Logs 101](#wabbajack-logs-101)
 
 ### **General Issues**
-[Wabbajack - General Issues](https://github.com/Dace617/FGModlistsKB/blob/main/KB%20Content.md#general-wabbajack-issues)
-[Living Skyrim - General Issues](https://github.com/Dace617/FGModlistsKB/blob/main/KB%20Content.md#general-living-skyrim-issues)
-[Path of the Dovahkiin - General Issues](https://github.com/Dace617/FGModlistsKB/blob/main/KB%20Content.md#general-path-of-the-dovahkiin-issues)
-[MOISE - General Issues](https://github.com/Dace617/FGModlistsKB/blob/main/KB%20Content.md#general-moise-issues)
+  [Wabbajack - General Issues](#general-wabbajack-issues)
+  
+  [Living Skyrim - General Issues](#general-living-skyrim-issues)
+  
+  [Path of the Dovahkiin - General Issues](#general-path-of-the-dovahkiin-issues)
+  
+  [MOISE - General Issues](#general-moise-issues)
 
 ### **Tempoarary Issues**
-[Wabbajack - Temporary Issues](https://github.com/Dace617/FGModlistsKB/blob/main/KB%20Content.md#temporary-wabbajack-issues)
-[Living Skyrim - Temporary Issues](https://github.com/Dace617/FGModlistsKB/blob/main/KB%20Content.md#temporary-living-skyrim-issues)
-[Path of the Dovahkiin - Temporary Issues](https://github.com/Dace617/FGModlistsKB/blob/main/KB%20Content.md#temporary-path-of-the-dovahkiin-issues)
+  [Wabbajack - Temporary Issues](#temporary-wabbajack-issues)
+
+  [Living Skyrim - Temporary Issues](#temporary-living-skyrim-issues)
+
+  [Path of the Dovahkiin - Temporary Issues](#temporary-path-of-the-dovahkiin-issues)
 
 
 
 # Wabbajack Logs 101
 
 **A brief explanation of the contents of a typical Wabbajack log.**
+
 This will be an overview of the contents of a typical Wabbajack log file with each section roughly explained (at least to the best of my ability) and what type of information you can usually extract from each part of the log. I've included some screenshots to help.
 
 Fully detailed solutions and things to look for in logs will be included in the General Issues section for quick reference.
@@ -177,21 +183,54 @@ Thank you for reading this far!
 
 
 
-
-
-
-
-
-
-
-
-
 # General Issues
 
 
 
-### General Wabbajack Issues
+## General Wabbajack Issues
 
+This section will detail common issues with Wabbajack installs. Where possible I will include screenshots of the errors, while this list is being curated I will substitute paraphrased error messages to the best of my recollection if I do not have a screenshot of the error. Please DM me any errors that I've missed or if you have screenshots of any yourself, or feel free to use a pull request, this is intented to be a community project.
+
+
+  ### Wabbajack will not open correctly.
+  
+  ![image](https://user-images.githubusercontent.com/38520983/154899155-f61e3312-6027-4549-bbe1-f7abd42d928a.png)
+  
+  #### Wabbajack is stuck on a loading splash
+  
+  ###### Cause
+    Unkown
+  ###### Solution
+    wjreset command
+
+  ### Install Failed Errors
+  
+  ![image](https://user-images.githubusercontent.com/38520983/154900542-8c122467-9f36-4b66-88df-99a58b9827da.png)
+  
+  #### Install Failed with screenshot showing the Wabbajack UI log with 'Unable to download...' error visible.
+  
+  ###### Cause
+    A mod file has failed to download
+  ###### Solution
+    Note which mod has failed and direct user to pinned solution for common failling files either in discord or the Readme. 
+    If none exists check the Wabbajack log file.
+
+  ![image](https://user-images.githubusercontent.com/38520983/154901280-95204c98-616e-496d-b399-45c692a78179.png)
+  
+  Wabbajack Log version of above error
+  
+  ###### Detailed Solution
+  For errors in the log, note the download source in brackets after the file that is unable to be downloaded, in this example for a MEGA hosted download the link is displayed in full, copy pasting this link will lead to a download page for this mod if no mirror link exists in the readme or in the Discord pinned messages.
+  
+  For google drive links the log entry will end in `(GoogleDriveDownloader+State|1mfTQy2HIsdz8WWuTLDgiOR-t_IBZyTQC)` To generate a link to the file erroring take the string of letters and numbers after the `GoogleDriveDownloader+State|` part (remember to remove the bracket at the end of the line) and add it to the end of `https://drive.google.com/file/d/` so for example: `https://drive.google.com/file/d/1mfTQy2HIsdz8WWuTLDgiOR-t_IBZyTQC` 
+  
+  For Nexus file errors the log line will end in `(NexusDownloader+State|SkyrimSpecialEdition|19924|66001)` here the first part after the `NexusDownloader+State` will be the game category, the next is the Mod ID, and the last is the File ID. Finding the mod name is usually easy, but you can attach the Mod ID to the end of `https://www.nexusmods.com/skyrimspecialedition/mods/` to find the mod page. To find the File ID, go to the Files tab of the mod page and hover over the download button. in the bottom left corner of most browsers you will see a notification message that will say something like `https://www.nexusmods.com/Core/Libs/Common/Widgets/DownloadPopUp?id=66001&nmm=1&game_id=1704` the important information here is the number after `DownloadPopUp?id=` The number after this must match the File ID from the Wabbajack log. this is how you find the correct download the list requires without knowing it beforehand. If there are a lot of these Nexus errors in the log this can indicate network errors or in the case of users with Nexus Premium, the need to change the download location preferences in the Site Preferences > Premium Membership Preferences settings to something other than CDN or a different region location.
+  
+  The last source type that doesn't have a direct link are Base Game files. These are noted with log lines ending in `(GameFileSourceDownloader+State|SkyrimSpecialEdition|1.5.97.0|skyrimse.exe)` This shows the game required, and the version number listed here is the *expected* version, not what the user currently has. the last part is the file required. Generally a fix for these files is to verify the game install through Steam.
+  
+  
+  
+    
 
 
 
