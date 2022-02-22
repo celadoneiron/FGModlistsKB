@@ -18,6 +18,14 @@
     * [Install Failed - Out of Memory error](#install-failed---out-of-memory-error)
     * [Installation Failed - 7zip Return Error](#installation-failed---7zip-return-error)
     * [Installation Failed - 7zip Return Error -- Not Enough Space](#installation-failed---7zip-return-error----not-enough-space)
+    * [Installation Failed - HttprequestException: No Such Host is known](#installation-failed---httprequestexception-no-such-host-is-known)
+    * [Install Failed - HttpRequestException: No Connection could be made because the target machine actively refused it](#install-failed---httprequestexception-no-connection-could-be-made-because-the-target-machine-actively-refused-it)
+    * [Install Failed - 'Error'](#install-failed---error)
+    * [Install Failed - Invalid File Format](#install-failed---invalid-file-format)
+    * [Install Failed - Cannot run inside xxx](#install-failed---cannot-run-inside-xxx)
+    * [Install Failed - Out of Memory Exception](#install-failed---out-of-memory-exception)
+    * [Install Failed - Could not find the game folder](#install-failed---could-not-find-the-game-folder)
+    * [HttpRequestException Error while Copying content to a stream](#httprequestexception-error-while-copying-content-to-a-stream)
   
   
   
@@ -474,7 +482,7 @@ Most HttpRequestException errors will have little troubleshooting steps other th
 
 
 
-### General Living Skyrim Issues
+## General Living Skyrim Issues
 
 This section will detail specific issues to the Living Skyrim 3 Modlist that are unlikely to be resolved within 1 or 2 patches to the modlist but are issues that repeatedly arise in doing support for the list. Generally fixes to these issues will be pinned in the various support channels but they will be detailed here to help both identify the issues and allow you to know which pinned message to direct the user to.
 
