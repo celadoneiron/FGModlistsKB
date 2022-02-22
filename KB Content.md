@@ -255,7 +255,7 @@ This section will detail common issues with Wabbajack installs. Where possible I
   
   ---
   
-  ## Install Failed Errors
+  ## Installation Failed Errors
   
   ![image](https://user-images.githubusercontent.com/38520983/154900542-8c122467-9f36-4b66-88df-99a58b9827da.png)
   
@@ -330,9 +330,155 @@ This section will detail common issues with Wabbajack installs. Where possible I
   
 ---
 
+![image](https://user-images.githubusercontent.com/38520983/155055630-40a8da90-d213-4160-810f-abc037909071.png)
+
+#### Installation Failed - HttprequestException: No Such Host is known.
+
+###### Cause
+    The host website noted in the error message is down or unreachable
+  
+###### Solution
+    Wait for the website to return to service
+
+###### Detailed Solution
+
+This error is caused when a website that Wabbajack needs to connect to is experiencing issues. Typically this will be Github or the Wabbajack build server, but it could occassionally happen to Nexus or other mod hosting websites. There is little that can be done to fix this other than wait for service to be restored.
+
+---
+
+![image](https://user-images.githubusercontent.com/38520983/155056472-38880fda-0d34-4a9b-b369-451334991908.png)
+
+#### Install Failed - HttpRequestException: No Connection could be made because the target machine actively refused it
+
+###### Cause
+    Networking error, target machine is refusing connection to the user
+    
+###### Solution
+    Network work around option in WJ settings, or VPN.
+    
+###### Detailed Solution
+
+Network errors are difficult to solve, trying the Network workaround option or a VPN can be good first steps, if the issue perissts it's likely an error with the users network settings, if you have the knowledge and time to devote to helping them sort this out feel free, but it can simply be considered outside the scope of support for the modlist.
+
+---
+
+![image](https://user-images.githubusercontent.com/38520983/155058303-db3f30a4-9146-4487-a3b4-9e40da770da3.png)
+
+#### Install Failed - 'Error'
+
+###### Cause
+    Insufficient Hard Drive space
+
+###### Solution
+    Have user free space on the Drive(s) their install and download folder are located on as well as possibly their Windows Drive
+
+#### Detailed Solution
+
+This is a rarer error type that seems to be a combination of the Drive Watcher for Wabbajack not reacting and Wabbajack running out of space during the download phase as opposed to the install phase. If there are seemingly no other causes to the install failing and only this single line 'Error' in the log be sure to check the Drive Watcher section of the log to check the free space at the start of the install attempt and do your best judgement if it could be the issue, sometimes it is difficult to tell how much space is required when a user is mid-install.
+
+---
+
+![image](https://user-images.githubusercontent.com/38520983/155059364-60b8ed81-98f3-4ee4-a97d-cb3aa8e93b83.png)
+
+#### Install Failed - Invalid File Format
+
+###### Cause
+    File in error line is incorrect/corrupted
+    
+###### Solution
+    Have user delete file noted in the error message and download again
+    
+###### Detailed Solution
+
+This error is usually found during the extraction phase of the install, rarely from a mod file but usually from the Wabbajack file itself. The specific file that is erroring is noted in the error line in the Wabbajack log, as well as the location of said file. Direct the user to find the file at the path in the error message, delete it and obtain the file again. For Wabbajack files this is by browsing the modlist gallery in the app and clicking the download button again. For erroring mod archives, simply run the Wabbajack installer again.
+
+---
+
+![image](https://user-images.githubusercontent.com/38520983/155059780-ea1a7995-7e5d-4153-98c5-fff2640d1a2a.png)
+
+#### Install Failed - Cannot run inside xxx
+
+###### Cause
+    User is attempting to run wabbajack from a blacklisted location
+    
+###### Solution
+    Have user move their wabbajack files to it's own folder at the root of the drive
+
+###### Detailed Solution
+
+This is Wabbajack's sanity check to avoid the program running in Windows Protected locations, you can double check by looking at the beginning of the log to find where Wabbajack is running in. Note that this does not stop users *installing* modlists in Windows Protected locations so a good follow up is to make sure their install/download locations aren't also in one of these locations
+
+---
+
+![image](https://user-images.githubusercontent.com/38520983/155060274-e6cd1415-9c88-4074-9c2f-a5c0bc24844a.png)
+
+#### Install Failed - Out of Memory Exception
+
+###### Cause
+    Wabbajack has run out of memory
+    
+###### Solution
+    pagefile command or check physical memory amount
+    
+###### Detailed Solution
+
+This error is relatively rare, Check the pagefile amount at the begining of the log and have the user increase it following the pagefile command, if this doesn't solve the issue check the phsyical amount of memory reported, if the error persists it could indicate issues with the users actual physical memory.
+
+---
+
+![image](https://user-images.githubusercontent.com/38520983/155060629-122c34bd-530b-4559-bc00-13389cca5b93.png)
+
+#### Install Failed - Could not find the game folder
+
+###### Cause
+    Wabbajack could not find the game folder
+    
+###### Solution
+    Ensure game is actually installed, Run game once from steam
+    
+###### Detailed Solution
+
+This error occurs when Wabbajack cannot find the Game Files that the list requires, generally this will mean either:
+  * The user has moved the game files from where Steam expected them to be
+  * The user hasn't run the game once since installing so registry entries may not be present
+  * The user doesn't actually have the game installed
+  * The user is pirating the game (or rarely some other pirated game has overwritten the registry)
+
+This is best checked through the Game Finder list in the Wabbajack log. If there is no entry there for the game required to install the list, check to make sure the user has it installed, if it *is* present there ensure with the user that the location listed is where they have the game files, users tend to copy/paste Steam game files to move them out of Program Files etc. If none of these solutions help the next steps would be to check for piracy, usually by getting a screenshot of the user's game folder, there are pins in the discord to help identify piracy. Reinstalling the game from scratch would be the only further troubleshooting for this issue unless it is a very specific list problem.
+
+****** Additional note on piracy
+
+![image](https://user-images.githubusercontent.com/38520983/155061384-28eb8b29-cbf6-4626-9d83-3d20b7bbef48.png)
+
+Probably very rarely the above issue can be caused by other pirated software, as you can see in the screenshot the entirety of the steam registry entries are pointing to one Steam game that doesn't not have a typical Steam Library path that includes `steamapps/common` therefore they should remove this software and reinstall Steam entirely to refresh it's registry entries.
+
+---
+
+![image](https://user-images.githubusercontent.com/38520983/155062186-800353db-7234-4f88-b907-d2b3fdf4abca.png)
+
+#### HttpRequestException Error while Copying content to a stream
+
+###### Cause
+    Unkown, some type of HTTP error
+
+###### Solution
+    Vpn or Wabbajack workaround
+    
+###### Detailed Solution
+    
+Most HttpRequestException errors will have little troubleshooting steps other than suggestions of using the Network Workaround setting or a VPN, a good followup question if these solutions don't work is asking if the user is connected to public or restricted WIFI networks (such as at a school or dorm setting, etc.) Obviously there is little we can do to help with network issues on the user end
+
+---
+
+
+
 
 
 ### General Living Skyrim Issues
+
+This section will detail specific issues to the Living Skyrim 3 Modlist that are unlikely to be resolved within 1 or 2 patches to the modlist but are issues that repeatedly arise in doing support for the list. Generally fixes to these issues will be pinned in the various support channels but they will be detailed here to help both identify the issues and allow you to know which pinned message to direct the user to.
+
+---
 
 
 
