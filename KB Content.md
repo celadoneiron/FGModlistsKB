@@ -32,7 +32,9 @@
  * [General Mod Organizer 2 Issues](#general-mod-organizer-2-issues)
     * [Clicking Run does not start the game](#clicking-run-does-not-start-the-game)
  
-  
+ * [General Skyrim Issues](#general-skyrim-issues)
+    * [Infinite blackness after loading screen](#infinite-blackness-after-loading-screen)
+   
   
   * [Living Skyrim - General Issues](#general-living-skyrim-issues)
       * [Large item blocking vision / Huge sword in Third Person view](#large-item-blocking-vision--huge-sword-in-third-person-view)
@@ -44,12 +46,17 @@
   
   [MOISE - General Issues](#general-moise-issues)
 
-### **Tempoarary Issues**
+### **Temporary Issues**
   [Wabbajack - Temporary Issues](#temporary-wabbajack-issues)
 
   [Living Skyrim - Temporary Issues](#temporary-living-skyrim-issues)
 
   [Path of the Dovahkiin - Temporary Issues](#temporary-path-of-the-dovahkiin-issues)
+
+---
+
+### **General Tips**
+  [Task Manager Always On Top](#task-manager-always-on-top)
 
 ---
 
@@ -534,7 +541,26 @@ This section will detail the few issues that occur with Mod Organizer 2 as they 
 
 ---
 
+## General Skyrim Issues
 
+This section will detail the issues that can occur with Skyrim in general, regardless of which modlist is in use.
+
+---
+
+#### Infinite blackness after loading screen
+
+###### Cause
+    Various: usually outdated Visual C++.
+    
+###### Solution
+    Download and install the latest version of Visual C++ from this link: https://aka.ms/vs/16/release/vc_redist.x64.exe
+    
+###### Detailed Solution
+ 
+    If the loading screen tip and level meter disappear but your screen remains black, download and install the latest version of Visual C++ from this link: https://aka.ms/vs/16/release/vc_redist.x64.exe
+    If you continue to encounter the infinite black screen, but it's not consistent as to when it occurs, restart your computer and hope for the best.
+ 
+---
 
 ## General Living Skyrim Issues
 
@@ -594,6 +620,14 @@ An in-depth ENB settings guide is planned for now the Default ENB Culminated inc
 
 ### Temporary Path of the Dovahkiin Issues
 
+---
+
+## **General Tips**
+  #### Task Manager Always On Top
+  To make sure that you can access Task Manager if the game freezes, open Task Manager now (Ctrl+Shift+Esc), click "Options", and enable "Always on top". This will prevent you having to perform a full PC restart because the Task Manager window is hidden behind the frozen game window.
+
+
+---
 
 
 
