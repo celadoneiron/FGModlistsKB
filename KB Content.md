@@ -522,7 +522,7 @@ This section will detail the few issues that occur with Mod Organizer 2 as they 
 |The Game doesn't launch after the locked window|Possibly AV, but usually impatience|User is probably being impatient, advise to wait, disable/add exceptions to AV|
 
 * For the dependecies required typically we suggest running the game once, so Steam installs the required files, other dependencies required include:
-[Visual C redistributables](https://aka.ms/vs/16/release/vc_redist.x64.exe) and *both* the console and desktop versions of [dot net](https://dotnet.microsoft.com/download/dotnet/5.0/runtime)
+[Visual C](https://aka.ms/vs/16/release/vc_redist.x64.exe) and *both* the console and desktop versions of [DotNet](https://dotnet.microsoft.com/download/dotnet/5.0/runtime)
 
 ---
 
