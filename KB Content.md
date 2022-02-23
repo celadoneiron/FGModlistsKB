@@ -12,6 +12,7 @@
   
   * [Wabbajack will not start the modlist installation](#wabbajack-will-not-start-the-modlist-installation)
     * [Wabbajack is stuck on the select install and download location screen](#wabbajack-is-stuck-on-the-select-install-and-download-location-screen)
+    * [Wabbajack stuck on Installing modlist screen](#wabbajack-stuck-on-installing-modlist-screen)
   
   * [Install Failed Errors]()
     * [Install Failed with screenshot showing the Wabbajack UI log with 'Unable to download...' error visible.](#install-failed-with-screenshot-showing-the-wabbajack-ui-log-with-unable-to-download-error-visible)
