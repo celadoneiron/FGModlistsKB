@@ -263,6 +263,21 @@ This section will detail common issues with Wabbajack installs. Where possible I
   
   ---
   
+![image](https://user-images.githubusercontent.com/38520983/155249609-2f553a2c-b86e-4254-8cf2-c5030524629c.png)
+
+#### Wabbajack stuck on Installing modlist screen
+
+###### Cause
+    Caused by unknown errors during login to various mod websites
+###### Solution
+    Restart wabbajack and try the install again
+
+###### Detailed Solution
+
+Erorrs on this screen typically mean Wabbajack has hung during or after trying to log in to a mod hosting website, typically Nexus (showing just the 'Getting Nexus API Key' or showing the number of remaining API Calls) or on the 'Getting Vector Plexus Login' message. Typically this is fixed by just restarting Wabbajack and have the user start the install again. If that fails have the user check their login to the respective sites required for the list install.
+
+---
+
   ## Installation Failed Errors
   
   ![image](https://user-images.githubusercontent.com/38520983/154900542-8c122467-9f36-4b66-88df-99a58b9827da.png)
