@@ -29,11 +29,18 @@
     * [HttpRequestException Error while Copying content to a stream](#httprequestexception-error-while-copying-content-to-a-stream)
   
   
+ * [General Mod Organizer 2 Issues](#general-mod-organizer-2-issues)
+    * [Clicking Run does not start the game](#clicking-run-does-not-start-the-game)
+ 
   
   
-  [Living Skyrim - General Issues](#general-living-skyrim-issues)
+  * [Living Skyrim - General Issues](#general-living-skyrim-issues)
+      * [Large item blocking vision / Huge sword in Third Person view](#large-item-blocking-vision--huge-sword-in-third-person-view)
+      * [Nights and/or Interiors are too dark](#nights-andor-interiors-are-too-dark)
   
-  [Path of the Dovahkiin - General Issues](#general-path-of-the-dovahkiin-issues)
+ ---
+ 
+ [Path of the Dovahkiin - General Issues](#general-path-of-the-dovahkiin-issues)
   
   [MOISE - General Issues](#general-moise-issues)
 
@@ -44,6 +51,7 @@
 
   [Path of the Dovahkiin - Temporary Issues](#temporary-path-of-the-dovahkiin-issues)
 
+---
 
 
 # Wabbajack Logs 101
