@@ -554,7 +554,8 @@ This section will detail specific issues to the Living Skyrim 3 Modlist that are
 #### Nights and/or Interiors are too dark
 
 ###### Cause
-    Deliberate interaction between Darker Nights mod and the general LUX presets used in the list combined with user monitor settings/preference
+    Deliberate interaction between Darker Nights mod and the general LUX presets used in the list 
+    combined with user monitor settings/preference
 ###### Solution
     Direct user to raise brightness in ENB settings and/or change ENB Preset
     
