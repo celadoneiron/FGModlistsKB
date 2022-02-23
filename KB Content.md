@@ -470,7 +470,7 @@ This error occurs when Wabbajack cannot find the Game Files that the list requir
 
 This is best checked through the Game Finder list in the Wabbajack log. If there is no entry there for the game required to install the list, check to make sure the user has it installed, if it *is* present there ensure with the user that the location listed is where they have the game files, users tend to copy/paste Steam game files to move them out of Program Files etc. If none of these solutions help the next steps would be to check for piracy, usually by getting a screenshot of the user's game folder, there are pins in the discord to help identify piracy. Reinstalling the game from scratch would be the only further troubleshooting for this issue unless it is a very specific list problem.
 
-****** Additional note on piracy
+**Additional note on piracy**
 
 ![image](https://user-images.githubusercontent.com/38520983/155061384-28eb8b29-cbf6-4626-9d83-3d20b7bbef48.png)
 
@@ -494,13 +494,65 @@ Most HttpRequestException errors will have little troubleshooting steps other th
 
 ---
 
+## General Mod Organizer 2 Issues
 
+This section will detail the few issues that occur with Mod Organizer 2 as they do not fall under list specific nor Wabbajack issues.
+
+---
+
+#### Clicking Run does not start the game
+
+###### Cause
+    Various: usually Antivirus issues, game path issues, or missing dependencies
+    
+###### Solution
+    Restart PC, check Antivirus, check game path, install dependencies
+    
+###### Detailed Solution
+ 
+ This issue can show itself in various ways, and may need further questions to narrow down what exactly is happening. First find out what MO2 is actually doing. The steps that should occur on a successful booting of the game are: Click Run on List SKSE option, Mod Organizer will load the Virtual File System, SKSE will load (typically a blank CMD window will flash for a second or two then disappear, this is normal), Nod Organizer will show a "Mod Organizer 2 is locked while X is running" message, the game will launch after some time. 
+ 
+ Identifying at what point Mod Organizer is failling is the first step here. Refer to the table:
+ 
+ |Point of failure|Cause|Solution
+|:---:|:---:|:---:|
+|After Clicking Run|SKSE Dependency|Ensure SKSE dependencies are installed|
+|'Mod Organizer is locked' window is white|Unknown Mod Organizer error, Antivirus|Restart PC, disable/add exceptions to AV|
+|'Mod Organizer is locked' window disappears instantly|Missing Dependency(vc or dotnet*, Antivirus|Install dependencies, disable/add exceptions to AV|
+|The Game doesn't launch after the locked window|Possibly AV, but usually impatience|User is probably being impatient, advise to wait, disable/add exceptions to AV|
+
+* For the dependecies required typically we suggest running the game once, so Steam installs the required files, other dependencies required include:
+[Visual C redistributables](https://aka.ms/vs/16/release/vc_redist.x64.exe) and *both* the console and desktop versions of [dot net](https://dotnet.microsoft.com/download/dotnet/5.0/runtime)
+
+---
 
 
 
 ## General Living Skyrim Issues
 
-This section will detail specific issues to the Living Skyrim 3 Modlist that are unlikely to be resolved within 1 or 2 patches to the modlist but are issues that repeatedly arise in doing support for the list. Generally fixes to these issues will be pinned in the various support channels but they will be detailed here to help both identify the issues and allow you to know which pinned message to direct the user to.
+This section will detail specific issues to the Living Skyrim 3 Modlist that are unlikely to be resolved within 1 or 2 patches to the modlist but are issues that repeatedly arise in doing support for the list. Generally fixes to these issues will be pinned in the various support channels but they will be detailed here to help both identify the issues and allow you to know which pinned message to direct the user to. There will be few screenshots here for now as they're generally asked as questions in the discord.
+
+---
+
+#### Large item blocking vision / Huge sword in Third Person view
+
+###### Cause
+    Believed to be a bug in Sharpen other Swords. further details unknown
+###### Solution
+    Interacting with a tanning rack/armourer bench/grinding wheel should fix the issue
+    
+---
+
+#### Nights and/or Interiors are too dark
+
+###### Cause
+    Deliberate interaction between Darker Nights mod and the general LUX presets used in the list combined with user monitor settings/preference
+###### Solution
+    Direct user to raise brightness in ENB settings and/or change ENB Preset
+    
+###### Detailed Solution
+  
+An in-depth ENB settings guide is planned for now the Default ENB Culminated includes a setting under the ENBEffects heading on the right side of the ENB settings GUI (accessed with Shift+Enter) There are two settings at the top of this section, one for Nights and one for Interiors, setting these to values between 0.5 and the default 1 will raise the brightness for Nights and Interiors respectively. Several other ENBs such as Pi-Cho use a similar setting to adjust brightness. Silent Horizons can be adjusted using the F-Stops setting under the HDR Colour Grading section in the ENBEffects section. For adjusting other ENBs please refer to their mod pages.
 
 ---
 
